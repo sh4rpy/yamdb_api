@@ -21,3 +21,9 @@ git clone https://github.com/sh4rpy/yamdb_api.git
 ```bash
 pip install -r requirements.txt
 ```
+
+Выполните миграции:
+
+```bash
+python manage.py migrate
+```
