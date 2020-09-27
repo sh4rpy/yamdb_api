@@ -2,7 +2,7 @@ from .models import *
 from reviews.utils import ObjectMixin
 from rest_framework.response import Response
 
-from .permissions import IsAdminorMe
+from .permissions import IsAdminOrMe
 
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
@@ -58,7 +58,7 @@ def get_jwt_token(request):
 class UserViewSet(ObjectMixin, viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = [IsAdminorMe]
+    permission_classes = [IsAdminOrMe]
     model = User
     serializer = UserSerializer
 
